@@ -1,4 +1,4 @@
-FROM php:7.1-fpm
+FROM php:7.2-fpm
 MAINTAINER tanner.doug@gmail.com
 
 RUN docker-php-ext-install pdo pdo_mysql
