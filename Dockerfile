@@ -1,6 +1,9 @@
 FROM php:7.2-fpm
 MAINTAINER tanner.doug@gmail.com
 
+RUN apt-get update && apt-get install -y zlib1g-dev \
+    && docker-php-ext-install zip
+
 RUN docker-php-ext-install pdo pdo_mysql zip
 RUN apt-get update && apt-get install -y \
         libmagickwand-dev --no-install-recommends
